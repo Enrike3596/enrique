@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Establece la tipografía predeterminada */
+}
+
+:root {
+    --primary-color: #ffffff; /* Color blanco, usado en varios elementos */
+    --second-color: #d0d0d0; /* Color gris claro, usado en varios elementos */
+    --black-color: #000000; /* Color negro, usado en varios elementos */
+}
+
+body {
+    background-image: url(vertical-shot-beautiful-starry-sky.jpg); /* Establece la imagen de fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo mientras se hace scroll */
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: var(--second-color); /* Establece el color de los enlaces */
+}
+
+a:hover {
+    text-decoration: underline; /* Subraya los enlaces cuando el mouse pasa sobre ellos */
+}
+
+.wrapper {
+    width: 100%; /* Hace que el wrapper ocupe todo el ancho de la pantalla */
+    display: flex; /* Usamos Flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    min-height: 100vh; /* Hace que el wrapper ocupe toda la altura de la pantalla */
+    background-color: rgba(51, 24, 202, 0.2); /* Fondo oscuro con opacidad */
+}
+
+.login_box {
+    position: relative;
+    width: 450px; /* Establece el ancho fijo para el formulario de login */
+    backdrop-filter: blur(25px); /* Aplica un filtro de desenfoque al fondo */
+    border: 2px solid var(--primary-color); /* Borde del formulario en blanco */
+    border-radius: 15px; /* Bordes redondeados del formulario */
+    padding: 7.5em 2.5em 4em 2.5em; /* Espaciado interno del formulario */
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2); /* Sombra suave alrededor del formulario */
+}
+
+.login-header {
+    position: absolute;
+    top: 0; /* Posiciona la cabecera en la parte superior */
+    left: 50%; /* Centra la cabecera horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición para que se quede exactamente centrada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color); /* Fondo blanco para el encabezado */
+    width: 140px; /* Ancho fijo para el encabezado */
+    height: 70px; /* Altura fija para el encabezado */
+    border-radius: 0 20px 20px 20px; /* Bordes redondeados solo en la parte inferior */
+}
+
+.login-header span { /* Estilos para el texto del encabezado */
+    font-size: 20px; /* Tamaño de la fuente del texto en el encabezado */
+    color: var(--black-color); /* Color negro para el texto */
+}
+
+.login-header::before {
+    content: "";
+    position: center;
+    top: 0;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 50%; /* Hace un círculo en la esquina */
+    box-shadow: 15px 0 0 0 var(--primary-color); /* Sombra en la esquina */
+}
+
+.login-header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 50%; /* Hace un círculo en la esquina */
+    box-shadow: 15px 0 0 0 var(--primary-color); /* Sombra en la esquina */
+}
+
+.input_box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.input-field {
+    width: 100%; /* Hace que el campo de entrada ocupe todo el ancho disponible */
+    height: 55px; /* Establece la altura del campo de entrada */
+    font-size: 16px; /* Tamaño de la fuente en los campos de entrada */
+    background: transparent; /* Fondo transparente para el campo */
+    color: var(--second-color); /* Color del texto dentro del campo */
+    padding-inline: 20px 50px; /* Espaciado interno de los campos de entrada */
+    border: 2px solid var(--primary-color); /* Borde blanco alrededor del campo */
+    border-radius: 30px; /* Bordes redondeados */
+    outline: none; /* Elimina el contorno al seleccionar el campo */
+}
+
+#user {
+    margin-bottom: 10px; /* Espaciado inferior específico para el campo de usuario */
+}
+
+.label {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    transition: 0.2s; /* Transición suave al cambiar la posición */
+}
+
+.input-field:focus ~ .label,
+.input-field:valid ~ .label {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 14px; /* Ajusta el tamaño de la fuente cuando el campo está enfocado o tiene valor */
+    background-color: var(--primary-color); /* Fondo blanco para la etiqueta */
+    border-radius: 30px; /* Bordes redondeados */
+    color: var(--black-color); /* Color negro para la etiqueta */
+    padding: 0 10px; /* Espaciado alrededor de la etiqueta */
+}
+
+.icon {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    font-size: 20px; /* Tamaño del icono */
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between; /* Espaciado entre los elementos de recordar y olvidar */
+    font-size: 15px;
+    margin-top: 20px; /* Agrega un margen superior para separarlo del botón */
+}
+
+.dont-have-account {
+    text-align: center;
+    margin-top: 15px; /* Agrega un margen superior para separar esta línea del resto */
+}
+
+.input-submit {
+    width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+    height: 50px; /* Altura del botón */
+    background: #ececec; /* Fondo gris claro */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: 500; /* Grosor de la fuente */
+    border: none; /* Sin borde */
+    border-radius: 30px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: 0.3s; /* Transición suave en los cambios */
+}
+
+.input-submit:hover {
+    background: var(--second-color); /* Cambia el color de fondo cuando el mouse pasa sobre el botón */
+}
+
+.register {
+    text-align: center; /* Centra el texto de registro */
+}
+
+.register a {
+    font-weight: 500; /* Establece el grosor de la fuente en el enlace de registro */
+}
+
+@media only screen and (max-width: 564px) {
+    .wrapper {
+        padding: 20px; /* Agrega espaciado dentro del wrapper en pantallas pequeñas */
+    }
+
+    .login_box {
+        padding: 7.5em 1.5em 4em 1.5em; /* Ajusta el espaciado interno del formulario en pantallas pequeñas */
+    }
+}
