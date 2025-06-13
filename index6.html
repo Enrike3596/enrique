@@ -61,14 +61,44 @@
       </div>
     </header>
 
-    <!-- CONTENIDO -->
-    <main class="flex-1 flex justify-center items-start p-4">
-      <div class="card w-full max-w-5xl bg-base-100 shadow-sm">
-        <div class="card-body">
-          <h2 class="card-title mb-4">Mi información</h2>
-          <p>Aquí puedes mostrar la información del usuario o cualquier otro contenido principal.</p>
-          <div class="justify-end card-actions">
-            <button class="btn btn-primary">Guardar</button>
+    <!-- Contenido principal -->
+    <main class="flex-1 flex flex-col items-center p-2 mt-4">
+      <!-- Tabs -->
+      <div class="tabs tabs-box mb-4 w-full max-w-5xl">
+         <!-- Tab: Aval Consejo Académico -->
+        <input type="radio" name="my_tabs_6" class="tab" aria-label="Aval de Convalidación" checked />
+        <div class="tab-content bg-base-100 border-base-300 p-6">
+          <div class="card w-full max-w-5xl bg-base-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="card-title mb-4">Mi información</h2>
+              <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Columna 1 -->
+                <div class="flex flex-col gap-3">
+                  <label class="label"><span class="label-text">Inicio de semestre</span></label>
+                  <input type="date" class="input input-bordered w-full" />
+                  <label class="label"><span class="label-text">Fin de semestre</span></label>
+                  <input type="date" class="input input-bordered w-full" />
+                  <input type="text" placeholder="Nombre de la Universidad" class="input input-bordered w-full" />
+                  <label class="label"><span class="label-text">Fecha del Aval del Consejo Académico</span></label>
+                  <input type="date" class="input input-bordered w-full" />
+                  
+                </div>
+                <!-- Columna 2 -->
+                <div class="flex flex-col gap-3">
+                  <input type="text" placeholder="Número de acta del Consejo Académico" class="input input-bordered w-full" />
+                  <input type="text" placeholder="Nombre de de la secretaria Facultad" class="input input-bordered w-full" />
+                  <fieldset>
+                    <legend class="fieldset-legend">Documento de Soporte</legend>
+                    <input type="file" class="file-input" />
+                  </fieldset>
+                </div>
+                <!-- Botones al final -->
+                <div class="md:col-span-2 flex justify-end gap-2 mt-4">
+                  <button type="button" class="btn btn-primary">Editar</button>
+                  <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -86,11 +116,11 @@
         </div>
         <div class="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
           <div class="flex flex-col gap-4">
-            <a href="#"><i class="fi fi-rr-home text-xl"></i></a>
+            <a href="index.html"><i class="fi fi-rr-home text-xl"></i></a>
             <a href="index3.html"><i class="fi fi-rr-calendar text-xl"></i></a>
             <a href="index4.html"><i class="fi fi-rr-edit text-xl"></i></a>
             <a href="index5.html"><i class="fi fi-rr-calendar-clock text-xl"></i></a>
-            <a href="index6.html"><i class="fi fi-rr-badge-check text-xl"></i></a>
+            <a href="#"><i class="fi fi-rr-badge-check text-xl"></i></a>
           </div>
         </div>
       </div>
